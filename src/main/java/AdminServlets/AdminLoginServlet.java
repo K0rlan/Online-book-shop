@@ -38,6 +38,7 @@ public class AdminLoginServlet extends HttpServlet {
 				if (MyDao.getAdminAuthenticate(adminUsername, adminPassword)) {
 						adminSession = request.getSession(true);
 						adminSession.setAttribute("admin_sessionattr", adminUsername);
+						request.getSession().setAttribute("admin_name", adminUsername);
 						adminSession.setAttribute("admin_status", "true");
 						adminSession.setAttribute("admin", "admin");
 						adminSession.setAttribute("message", "You have Successfully Logged In.!!!");

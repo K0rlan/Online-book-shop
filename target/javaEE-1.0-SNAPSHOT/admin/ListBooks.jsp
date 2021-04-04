@@ -8,12 +8,10 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<%
-	List<?> books = (List<?>) request.getSession().getAttribute("books");
-	Book book = new Book();
-%>
+	<% List<?> books = (List<?>) request.getSession().getAttribute("books");%>
+	<%! Book book; %>
 </head>
-<body>
+<%@ include file = "../bodyStart.jsp" %>
 	<div>
 		<table>
 			<tr>
@@ -41,5 +39,4 @@
 			%>
 		</table>
 	</div>
-</body>
-</html>
+<%@ include file = "../footer.jsp" %>

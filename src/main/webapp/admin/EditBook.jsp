@@ -1,6 +1,4 @@
-<%@page import="DAO.MyDao"%>
 <%@page	import="Model.Book"%>
-<%@ page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 		 pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -9,9 +7,10 @@
 
 	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 	<title>Product Details</title>
-
+	<%! Book book; %>
 	<%
-		Book book = new Book();
+
+
 		book = (Book) request.getSession().getAttribute("book");
 		if (book == null) {
 			request.getSession().setAttribute("message", "Error");
@@ -19,7 +18,7 @@
 		}
 		assert book != null;%>
 </head>
-<body>
+<%@ include file = "../bodyStart.jsp" %>
 <div>
 	<form action="../EditBookServlet" method="post">
 		<table>
@@ -45,5 +44,4 @@
 		</table>
 	</form>
 </div>
-</body>
-</html>
+<%@ include file = "../footer.jsp" %>

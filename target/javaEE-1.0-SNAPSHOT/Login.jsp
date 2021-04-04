@@ -1,7 +1,7 @@
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-<body>
+<%@ include file = "bodyStart.jsp" %>
     <h3 >Sign in</h3>
     <form  action="UserLoginServlet" method="POST">
         <input type="email" name="form-username" placeholder="Login"/><br><br>
@@ -9,5 +9,4 @@
         <button type="submit" >Sign in</button>
     </form>
 </section>
-</body>
-</html>
+    <%@ include file = "footer.jsp" %>

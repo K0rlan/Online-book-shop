@@ -3,8 +3,8 @@
 <html>
 <head>
     <title>Order</title>
+    <%! Book book; %>
     <%
-        Book book = new Book();
         book = (Book) request.getSession().getAttribute("book");
         if (book == null) {
             request.getSession().setAttribute("message",
@@ -13,7 +13,7 @@
         }
         assert book != null;%>
 </head>
-<body>
+<%@ include file = "../bodyStart.jsp" %>
 <h2>Buy Cart</h2>
  <form action="../BuyCartServlet" method="post">
         <table>
@@ -39,5 +39,4 @@
         </table>
  </form>
 
-</body>
-</html>
+<jsp:include page="../footer.jsp"/>

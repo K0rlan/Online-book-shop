@@ -1,16 +1,26 @@
 <%@ page import="Model.Book" %>
 <%@ page import="java.util.List" %>
+<%@ page import="Model.User" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
     <title>Menu</title>
+    <% List<?> books = (List<?>) request.getSession().getAttribute("books");%>
+    <%! Book book; %>
+
+    <%! User user; %>
     <%
-        List<?> books = (List<?>) request.getSession().getAttribute("books");
-        Book book = new Book();
-    %>
+    user = (User) request.getSession().getAttribute("logged_user");
+    if (user == null) {
+    request.getSession().setAttribute("message",
+    "Error!!!!!!!! Select Product First.");
+    response.sendRedirect("Login.jsp");
+    }
+    assert user != null;%>
 </head>
-<body>
-<h1>Menu for user</h1>
+<%@ include file = "../bodyStart.jsp" %>
+<h1>Welcome, <%out.print(user.getUsername());%></h1>
+<h1 style="text-align: center">Menu</h1>
 <div>
     <table>
         <tr>
@@ -35,5 +45,4 @@
         %>
     </table>
 </div>
-</body>
-</html>
+<jsp:include page="../footer.jsp"/>

@@ -9,7 +9,7 @@
         Cart cart = new Cart();
     %>
 </head>
-<body>
+<%@ include file = "../bodyStart.jsp" %>
 <div id="edit">
     <h1>Cart of history</h1>
     <table>
@@ -36,5 +36,4 @@
         %>
     </table>
 </div>
-</body>
-</html>
+<jsp:include page="../footer.jsp"/>

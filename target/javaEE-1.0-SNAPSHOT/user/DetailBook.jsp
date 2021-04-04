@@ -3,44 +3,46 @@
 <html>
 <head>
     <title>Detail Book</title>
-    <%
-        Book book = new Book();
-        book = (Book) request.getSession().getAttribute("book");
-        if (book == null) {
-            request.getSession().setAttribute("message", "Error");
-            response.sendRedirect("Menu.jsp");
-        }
-        assert book != null;%>
+    <%--    <%! Movie movie; %>--%>
+    <jsp:useBean id="book" class="Model.Book" scope="session"/>
+    <%--    <%--%>
+    <%--//        Movie movie = new Movie();--%>
+    <%--        movie = (Movie) request.getSession().getAttribute("movie");--%>
+    <%--        if (movie == null) {--%>
+    <%--            request.getSession().setAttribute("message",--%>
+    <%--                    "Error!!!!!!!! Select Product First.");--%>
+    <%--            response.sendRedirect("Menu.jsp");--%>
+    <%--        }--%>
+    <%--        assert movie != null;%>--%>
 </head>
-<body>
+<%@ include file = "../bodyStart.jsp" %>
 <h2>Add New Book</h2>
 <div>
     <form action="../BookDetailServlet" method="post">
         <table>
             <tr>
                 <td>Book Id:</td>
-                <td><%=book.getBookId()%></td>
+                <td><jsp:getProperty name="book" property="bookId"/></td>
             </tr>
             <tr>
                 <td>Book Name:</td>
-                <td><%=book.getBookName()%></td>
+                <td><jsp:getProperty name="book" property="bookName"/></td>
             </tr>
             <tr>
                 <td>Book Price:</td>
-                <td><%=book.getBookPrice()%></td>
+                <td><jsp:getProperty name="book" property="bookPrice"/></td>
             </tr>
             <tr>
                 <td>Book Year:</td>
-                <td><%=book.getBookYear()%></td>
+                <td><jsp:getProperty name="book" property="bookYear"/></td>
             </tr>
             <tr>
-                <td><a href="../BuyCartServlet?bookId=<%=book.getBookId()%>">
+                <td><a href="../BuyCartServlet?bookId=<jsp:getProperty name="book" property="bookId"/>">
                     <button type="button">Buy Carts</button>
                 </a></td>
             </tr>
         </table>
     </form>
 </div>
-</body>
-</html>
+<jsp:include page="../footer.jsp"/>
 
