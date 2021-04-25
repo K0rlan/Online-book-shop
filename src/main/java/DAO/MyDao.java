@@ -24,7 +24,10 @@ public class MyDao {
                     int id = resultSet.getInt(1);
                     String username = resultSet.getString(2);
                     String password = resultSet.getString(3);
-                    Admin admin = new Admin(id, username, password);
+                    Admin admin = new Admin();
+                    admin.setAdminId(id);
+                    admin.setAdminUsername(username);
+                    admin.setAdminPassword(password);
                     admins.add(admin);
                 }
             }
@@ -55,7 +58,11 @@ public class MyDao {
                     String user_username = resultSet.getString(2);
                     String password = resultSet.getString(3);
                     String user_email = resultSet.getString(4);
-                    User user = new User(id, user_username, password, user_email);
+                    User user = new User();
+                    user.setUser_id(id);
+                    user.setUsername(user_username);
+                    user.setUser_password(password);
+                    user.setEmail(user_email);
                     users.add(user);
                 }
             }
@@ -109,7 +116,11 @@ public class MyDao {
                     String name = resultSet.getString(2);
                     double price = resultSet.getInt(3);
                     int year = resultSet.getInt(4);
-                    Book book = new Book(id, name, price, year);
+                    Book book = new Book();
+                    book.setBookId(id);
+                    book.setBookName(name);
+                    book.setBookYear(year);
+                    book.setBookPrice(price);
                     books.add(book);
                 }
             }
@@ -136,7 +147,13 @@ public class MyDao {
                     double price = resultSet.getDouble(4);
                     double total = resultSet.getDouble(5);
                     int userId = resultSet.getInt(6);
-                    Cart cart = new Cart(id, amount, bookName, price, total, userId);
+                    Cart cart = new Cart();
+                    cart.setAmount(amount);
+                    cart.setBook_name(bookName);
+                    cart.setCart_id(id);
+                    cart.setCost(price);
+                    cart.setTotal_cost(total);
+                    cart.setUser_id(userId);
                     carts.add(cart);
                 }
             }
@@ -160,11 +177,15 @@ public class MyDao {
                     ResultSet resultSet = preparedStatement.executeQuery();
                     if(resultSet.next()){
 
-                        int movId = resultSet.getInt(1);
+                        int bookId = resultSet.getInt(1);
                         String name = resultSet.getString(2);
                         double price = resultSet.getInt(3);
                         int year = resultSet.getInt(4);
-                        book = new Book(movId, name, price, year);
+                        book = new Book();
+                        book.setBookPrice(price);
+                        book.setBookYear(year);
+                        book.setBookName(name);
+                        book.setBookId(bookId);
                     }
                 }
             }
@@ -284,7 +305,11 @@ public class MyDao {
                         String name = resultSet.getString(2);
                         String user_password = resultSet.getString(3);
                         String userEmail = resultSet.getString(4);
-                        user1 = new User(userId, name, user_password, userEmail);
+                        user1 = new User();
+                        user1.setEmail(userEmail);
+                        user1.setUser_password(user_password);
+                        user1.setUsername(name);
+                        user1.setUser_id(userId);
                     }
                 }
             }

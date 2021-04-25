@@ -1,19 +1,14 @@
 package Model;
 
-public class User {
+import java.io.Serializable;
+
+public class User implements Serializable {
 	private int user_id;
 	private String username;
 	private String user_password;
 	private String user_email;
 
 	public User(){	}
-
-	public User(int user_id, String username, String user_password, String email_id) {
-		this.user_id = user_id;
-		this.username = username;
-		this.user_password = user_password;
-		this.user_email = email_id;
-	}
 
 	public int getUser_id() {
 		return user_id;

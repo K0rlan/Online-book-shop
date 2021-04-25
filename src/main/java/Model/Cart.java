@@ -1,6 +1,8 @@
 package Model;
 
-public class Cart {
+import java.io.Serializable;
+
+public class Cart implements Serializable {
     private int cart_id;
     private int amount;
     private String book_name;
@@ -10,14 +12,6 @@ public class Cart {
 
     public Cart(){}
 
-    public Cart(int cart_id, int amount, String book_name, double cost, double total_cost, int user_id) {
-        this.cart_id = cart_id;
-        this.amount = amount;
-        this.book_name = book_name;
-        this.cost = cost;
-        this.total_cost = total_cost;
-        this.user_id = user_id;
-    }
 
     public int getUser_id() {
         return user_id;

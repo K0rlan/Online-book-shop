@@ -1,22 +1,14 @@
 package Model;
 
-public class Book {
+import java.io.Serializable;
+
+public class Book implements Serializable {
     private int bookId;
-
     private String bookName;
-
     private double bookPrice;
-
     private int bookYear;
 
     public Book(){}
-
-    public Book(int bookId, String bookName, double bookPrice, int bookYear) {
-        this.bookId = bookId;
-        this.bookName = bookName;
-        this.bookPrice = bookPrice;
-        this.bookYear = bookYear;
-    }
 
     public int getBookId() {
         return bookId;

@@ -1,27 +1,15 @@
 package Model;
 
-//@Entity
-//@Table(name="ADMIN")
-public class Admin {
-//    @Id
-//    @GeneratedValue(strategy=GenerationType.AUTO)
-//    @Column(name="ADMINID")
+import java.io.Serializable;
+
+public class Admin implements Serializable {
+
     private int adminId;
-
-//    @Column(name="ADMINUSERNAME", nullable=false, unique=true)
     private String adminUsername;
-
-//    @Column(name="ADMINPASSWORD", nullable=false)
     private String adminPassword;
 
     public Admin() {	}
 
-    public Admin(int adminId, String adminUsername, String adminPassword) {
-        super();
-        this.adminId = adminId;
-        this.adminUsername = adminUsername;
-        this.adminPassword = adminPassword;
-    }
     public int getAdminId() {
         return adminId;
     }
