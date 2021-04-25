@@ -1,12 +1,10 @@
 package DAO;
 
-import Model.Admin;
-import Model.Book;
-import Model.Cart;
-import Model.User;
+import Model.*;
 
 import java.sql.*;
 import java.util.ArrayList;
+import java.util.List;
 
 public class MyDao {
     private static final String url = "jdbc:postgresql://localhost:5432/javaEE";
@@ -191,7 +189,6 @@ public class MyDao {
                     preparedStatement.executeUpdate();
 
                     return true;
-//                    return  preparedStatement.executeUpdate();
                 }
             }
         }
@@ -218,7 +215,6 @@ public class MyDao {
                     preparedStatement.executeUpdate();
 
                     return true;
-//                    return  preparedStatement.executeUpdate();
                 }
             }
         }
@@ -263,7 +259,6 @@ public class MyDao {
                     preparedStatement.setInt(1, id);
                     preparedStatement.executeUpdate();
                     return true;
-//                    return  preparedStatement.executeUpdate();
                 }
             }
         }

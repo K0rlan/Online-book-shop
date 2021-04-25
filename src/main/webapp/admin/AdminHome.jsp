@@ -17,4 +17,7 @@
 <h1>My Login: <%out.print(admin);%></h1>
     <li><a href="AddBook.jsp">New Book</a></li>
     <li><a href="ListBooks.jsp">List Book</a></li>
+<a href="../AdminLogoutServlet">
+    <button type="button">Logout</button>
+</a>
 <%@ include file = "../footer.jsp" %>

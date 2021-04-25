@@ -3,17 +3,7 @@
 <html>
 <head>
     <title>Detail Book</title>
-    <%--    <%! Movie movie; %>--%>
     <jsp:useBean id="book" class="Model.Book" scope="session"/>
-    <%--    <%--%>
-    <%--//        Movie movie = new Movie();--%>
-    <%--        movie = (Movie) request.getSession().getAttribute("movie");--%>
-    <%--        if (movie == null) {--%>
-    <%--            request.getSession().setAttribute("message",--%>
-    <%--                    "Error!!!!!!!! Select Product First.");--%>
-    <%--            response.sendRedirect("Menu.jsp");--%>
-    <%--        }--%>
-    <%--        assert movie != null;%>--%>
 </head>
 <%@ include file = "../bodyStart.jsp" %>
 <h2>Add New Book</h2>

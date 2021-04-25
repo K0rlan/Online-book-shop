@@ -7,6 +7,7 @@
         <input type="email" name="form-username" placeholder="Login"/><br><br>
         <input type="password" name="form-password" placeholder="Password"/><br><br>
         <button type="submit" >Sign in</button>
+        <a href="Registration.jsp" class="register" >Register</a>
     </form>
 </section>
     <%@ include file = "footer.jsp" %>
