@@ -29,7 +29,7 @@
     %>
 </head>
 <jsp:include page="../bodyStart.jsp"/>
-<nav class="navbar fixed-top navbar-expand-lg navbar-dark" style="background-color: crimson">
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark" style="background-color: darkslategrey">
     <a class="navbar-brand" href="Menu.jsp">Home</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333"
             aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation">
@@ -39,6 +39,7 @@
 </nav>
 <div id="edit">
     <h3 class="text-center font-weight-bold text-dark text-uppercase pb-2 mb-4" style="padding-top: 100px">Cart of history</h3>
+    <div class="container py-5 z-depth-1">
     <table class="table">
         <tr>
             <th scope="col">Cart id</th>
@@ -62,5 +63,6 @@
             }
         %>
     </table>
+    </div>
 </div>
 <jsp:include page="../footer.jsp"/>

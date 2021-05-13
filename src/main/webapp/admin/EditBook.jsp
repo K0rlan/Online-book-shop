@@ -33,45 +33,54 @@
 		assert book != null;%>
 </head>
 <jsp:include page="../bodyStart.jsp"/>
-<nav class="navbar fixed-top navbar-expand-lg navbar-dark" style="background-color: crimson">
-	<a class="navbar-brand" href="Menu.jsp">Home</a>
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark" style="background-color: darkslategrey">
+	<a class="navbar-brand" href="AdminHome.jsp">Home</a>
 	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333"
 			aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation">
 		<span class="navbar-toggler-icon"></span>
 	</button>
+	<a class="navbar-brand" href="AddBook.jsp"> New Book </a>
+	<a class="navbar-brand" href="ListBooks.jsp"> List Book </a>
 	<a class="navbar-brand" href="../AdminLogoutServlet"> Logout </a>
 </nav>
 <h3 class="text-center font-weight-bold text-dark text-uppercase pb-2 mb-4" style="padding-top: 100px">Edit Book Info</h3>
-<div>
+<div class="container py-5 z-depth-1">
 	<form action="../EditBookServlet" method="post">
 		<table class="table">
 			<tr>
 				<td scope="col">Book Id:</td>
-				<td ><input type="text" name="book_id" readonly="readonly" value="<%=book.getBookId()%>" /></td>
+				<td ><input type="text" name="book_id" readonly="readonly" value="<%=book.getBookId()%>"
+							class = "form-control" style="width: 300px;"/></td>
 			</tr>
 			<tr>
 				<td scope="col">Book Name:</td>
-				<td><input type="text" name="book_name" required="true" value="<%=book.getBookName()%>" /></td>
+				<td><input type="text" name="book_name" required="true" value="<%=book.getBookName()%>"
+						   class = "form-control" style="width: 300px;" placeholder="Name"/></td>
 			</tr>
 			<tr>
 				<td scope="col">Book Author:</td>
-				<td><input type="text" name="book_author" required="true" value="<%=book.getBookAuthor()%>" /></td>
+				<td><input type="text" name="book_author" required="true" value="<%=book.getBookAuthor()%>"
+						   class = "form-control" style="width: 300px;" placeholder="Author"/></td>
 			</tr>
 			<tr>
 				<td scope="col">Book Img:</td>
-				<td><input type="text" name="book_img" required="true" value="<%=book.getBookImg()%>" /></td>
+				<td><input type="text" name="book_img" required="true" value="<%=book.getBookImg()%>"
+						   class = "form-control" style="width: 300px;" placeholder="Image"/></td>
 			</tr>
 			<tr>
 				<td scope="col">Book Description:</td>
-				<td><input type="text" name="book_description" required="true" value="<%=book.getBookDescription()%>" /></td>
+				<td><input type="text" name="book_description" required="true" value="<%=book.getBookDescription()%>"
+						   class = "form-control" style="width: 300px;" placeholder="Description"/></td>
 			</tr>
 			<tr>
 				<td scope="col">Book Price:</td>
-				<td><input type="text" name="book_price" required="true" value="<%=book.getBookPrice()%>" pattern="[0-9.]+" /></td>
+				<td><input type="text" name="book_price" required="true" value="<%=book.getBookPrice()%>" pattern="[0-9.]+"
+						   class = "form-control" style="width: 300px;" placeholder="Price"/></td>
 			</tr>
 			<tr>
 				<td scope="col">Book Year:</td>
-				<td><input type="text" name="book_year" required="true" value="<%=book.getBookYear()%>" pattern="[0-9.]+" /></td>
+				<td><input type="text" name="book_year" required="true" value="<%=book.getBookYear()%>" pattern="[0-9.]+"
+						   class = "form-control" style="width: 300px;" placeholder="Year"/></td>
 			</tr>
 			<tr>
 				<td><input value="Update Product" type="submit" class="btn btn-elegant" /></td>

@@ -29,16 +29,18 @@
 	<%! Book book; %>
 </head>
 <jsp:include page="../bodyStart.jsp"/>
-<nav class="navbar fixed-top navbar-expand-lg navbar-dark" style="background-color: crimson">
-	<a class="navbar-brand" href="Menu.jsp">Home</a>
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark" style="background-color: darkslategrey">
+	<a class="navbar-brand" href="AdminHome.jsp">Home</a>
 	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333"
 			aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation">
 		<span class="navbar-toggler-icon"></span>
 	</button>
+	<a class="navbar-brand" href="AddBook.jsp"> New Book </a>
+	<a class="navbar-brand" href="ListBooks.jsp"> List Book </a>
 	<a class="navbar-brand" href="../AdminLogoutServlet"> Logout </a>
 </nav>
 <h3 class="text-center font-weight-bold text-dark text-uppercase pb-2 mb-4" style="padding-top: 100px">Books</h3>
-	<div>
+	<div class="container py-5 z-depth-1">
 		<table class="table">
 			<tr>
 				<th scope="col">Book Name</th>

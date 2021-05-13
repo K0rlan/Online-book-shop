@@ -36,8 +36,7 @@ public class UserRegisterServlet extends HttpServlet {
 
 				response.setContentType("text/html");
 				if(isUserRegistered){
-					out.print("<h3>You are Registered Successfully!!!!!!</h3>");
-					out.print("<a href='Login.jsp'>Go To Login Page</a>");
+					response.sendRedirect("Login.jsp");
 				}
 			}catch(Exception e){
 				e.printStackTrace();

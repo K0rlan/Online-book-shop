@@ -19,5 +19,11 @@
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
       <jdbc-url>jdbc:postgresql://localhost:5432/booksShop</jdbc-url>
     </data-source>
+    <data-source source="LOCAL" name="onlineBookShop@localhost" uuid="6bb36efc-197f-468a-8ae0-65da10b1fc55">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:5432/onlineBookShop</jdbc-url>
+    </data-source>
   </component>
 </project>

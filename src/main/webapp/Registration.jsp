@@ -25,16 +25,19 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
 </head>
 <body>
-<nav class="navbar fixed-top navbar-expand-lg navbar-dark" style="background-color: crimson">
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark" style="background-color: darkslategrey">
     <a class="navbar-brand" href="index.jsp">Change Role</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333"
             aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
 </nav>
-<section class="p-5  text-center"
-         style="background-size: cover; background-color: seashell; height: 810px">
-    <h3 class="text-center font-weight-bold text-light-dark text-uppercase pb-2 mb-4" style="margin-top: 100px">Sign up</h3>
+<<section class="p-5  text-center"
+          style="background-size: cover; background: url('https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80') no-repeat fixed center center; height: 810px">
+    <h3 class="text-center font-weight-bold text-white text-uppercase pb-2 mb-4" style="margin-top: 100px">Sign up</h3>
+    <hr class="w-header my-4 white">
+    <!-- Section description -->
+    <h3 class="lead text-center text-white pt-2 mb-5">Welcome to Online Book Shop!</h3>
     <form class="mb-5 mx-md-5" action="UserRegisterServlet" method="POST">
         <div class="col-md-4 mb-4" style="margin: auto;">
             <input class="form-control" type="text" name="name" placeholder="Name"/>

@@ -27,32 +27,53 @@
 <title>Book Details</title>
 </head>
 <jsp:include page="../bodyStart.jsp"/>
-<nav class="navbar fixed-top navbar-expand-lg navbar-dark" style="background-color: crimson">
-	<a class="navbar-brand" href="Menu.jsp">Home</a>
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark" style="background-color: darkslategrey">
+	<a class="navbar-brand" href="AdminHome.jsp">Home</a>
 	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333"
 			aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation">
 		<span class="navbar-toggler-icon"></span>
 	</button>
+	<a class="navbar-brand" href="AddBook.jsp"> New Book </a>
+	<a class="navbar-brand" href="ListBooks.jsp"> List Book </a>
 	<a class="navbar-brand" href="../AdminLogoutServlet"> Logout </a>
 </nav>
 <h3 class="text-center font-weight-bold text-dark text-uppercase pb-2 mb-4" style="padding-top: 100px">Add New Book</h3>
-	<div>
+	<div class="container py-5 z-depth-1">
 		<form action="../AddBookServlet" method="post">
 			<table class="table">
 				<tr>
 					<td scope="col">Book Name:</td>
-					<td><input class = "form-control" type="text" name="book_name" required="true" /></td>
+					<td><input class = "form-control" type="text" name="book_name" required="true" style="width: 300px"
+							   placeholder="Name" /></td>
 				</tr>
 				<tr>
+					<td scope="col">Book Author:</td>
+					<td><input class = "form-control" type="text" name="book_author" required="true" style="width: 300px"
+							   placeholder="Author" /></td>
+				</tr>
+				<tr>
+					<td scope="col">Book Img:</td>
+					<td><input class = "form-control" type="text" name="book_img" required="true" style="width: 300px"
+							   placeholder="Image Url" /></td>
+				</tr>
+				<tr>
+					<td scope="col">Book Description:</td>
+					<td><input class = "form-control" type="text" name="book_description" required="true"style="width: 300px"
+							   placeholder="Description" /></td>
+				</tr>
+
+				<tr>
 					<td scope="col">Book Price:</td>
-					<td><input class = "form-control" type="text" name="book_price" required="true" pattern="[0-9.]+"/></td>
+					<td><input class = "form-control" type="text" name="book_price" required="true" pattern="[0-9.]+" style="width: 300px"
+							   placeholder="Price" /></td>
 				</tr>
 				<tr>
 					<td scope="col">Book Year:</td>
-					<td><input class = "form-control" type="text" name="book_year" required="true"/></td>
+					<td><input class = "form-control" type="text" name="book_year" required="true" style="width: 300px"
+							   placeholder="Year" /></td>
 				</tr>
 				<tr>
-					<td colspan="2"><input value="Submit" type="submit" class="brn btn-elegant"/></td>
+					<td colspan="2"><input value="Submit" type="submit" class="btn btn-elegant"/></td>
 				</tr>
 			</table>
 		</form>

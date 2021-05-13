@@ -33,7 +33,7 @@
         assert book != null;%>
 </head>
 <jsp:include page="../bodyStart.jsp"/>
-<nav class="navbar fixed-top navbar-expand-lg navbar-dark" style="background-color: crimson">
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark" style="background-color: darkslategrey">
     <a class="navbar-brand" href="Menu.jsp">Home</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333"
             aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation">
@@ -42,6 +42,7 @@
     <a class="navbar-brand" href="../UserLogoutServlet"> Logout </a>
 </nav>
 <h3 class="text-center font-weight-bold text-dark text-uppercase pb-2 mb-4" style="padding-top: 100px">Buy Cart</h3>
+<div class="container py-5 z-depth-1">
  <form action="../BuyCartServlet" method="post">
         <table class="table">
             <tr>
@@ -54,16 +55,18 @@
             </tr>
             <tr>
                 <td scope="col">How many books:</td>
-                <td><input class="form-control"  type="text" name="amount" required="true" /></td>
+                <td><input class="form-control"  type="text" name="amount" required="true" style="width: 200px"
+                           placeholder="1" /></td>
             </tr>
             <tr>
                 <td scope="col">Your email:</td>
-                <td><input class="form-control"  type="text" name="user_email" required="true" /></td>
+                <td><input class="form-control"  type="text" name="user_email" required="true" style="width: 200px"
+                           placeholder="user@m.ru" /></td>
             </tr>
             <tr>
-                <td scope="col"><input value="Buy" type="submit" class="brn btn-elegant"/></td>
+                <td scope="col"><input value="Buy" type="submit" class="btn btn-elegant"/></td>
             </tr>
         </table>
  </form>
-
+</div>
 <jsp:include page="../footer.jsp"/>

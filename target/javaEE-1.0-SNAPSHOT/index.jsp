@@ -22,16 +22,22 @@
     <!-- MDB core JavaScript -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
 </head>
-<body>
-<%--<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>--%>
-<%--<h1><c:import var="data" url="http://www.javatpoint.com"/></h1>--%>
-<%--<c:out value="${'data'}"/>--%>
-<%--<%@ taglib uri="/WEB-INF/mytags.tld" prefix="m" %>--%>
-<%--Current Date and Time is: <m:today/>--%>
+<body  style=" height: 100%; width: 100%; background-image: url('https://images.unsplash.com/photo-1465929639680-64ee080eb3ed?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1')">
 <section class="p-5  text-center"
-         style="background-size: cover; background-color: seashell; height: 810px">
-    <h3 class="text-center font-weight-bold text-light-dark text-uppercase pb-2 mb-4" style="margin-top: 100px"><a href="AdminLogin.jsp">Admin</a></h3>
-    <h3 class="text-center font-weight-bold text-light-dark text-uppercase pb-2 mb-4" style="margin-top: 100px"><a href="Login.jsp">User</a></h3>
+         style="background-size: cover;">
+        <div class="koko">
+            <div class="view" style="margin-left: 150px">
+                <img src="https://images.unsplash.com/photo-1465929639680-64ee080eb3ed?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1"
+                     alt="First slide" style="height: 88%;  position: center; background-repeat: no-repeat;">
+                <div class="mask rgba-black-slight"></div>
+            </div>
+            <div class="carousel-caption" style="margin-bottom: 100px">
+                <h3>Sign in as</h3>
+                <a class="btn btn-dark" href="AdminLogin.jsp">Admin</a>
+                <a  class="btn btn-dark" href="Login.jsp">User</a>
+            </div>
+        </div>
+
 </section>
 </body>
 </html>

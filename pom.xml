@@ -83,7 +83,7 @@
                 <configuration>
                     <user>postgres</user>
                     <password>1234</password>
-                    <url>jdbc:postgresql://localhost:5432/booksShop</url>
+                    <url>jdbc:postgresql://localhost:5432/onlineBookShop</url>
                     <baselineOnMigrate>true</baselineOnMigrate>
                 </configuration>
             </plugin>

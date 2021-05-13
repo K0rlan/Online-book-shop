@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MyDao {
-    private static final String url = "jdbc:postgresql://localhost:5432/booksShop";
+    private static final String url = "jdbc:postgresql://localhost:5432/onlineBookShop";
     private static final String user = "postgres";
     private static final String password = "1234";
 
