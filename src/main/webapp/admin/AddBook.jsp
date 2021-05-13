@@ -44,6 +44,19 @@
 					<td><input class = "form-control" type="text" name="book_name" required="true" /></td>
 				</tr>
 				<tr>
+					<td scope="col">Book Author:</td>
+					<td><input class = "form-control" type="text" name="book_author" required="true" /></td>
+				</tr>
+				<tr>
+					<td scope="col">Book Img:</td>
+					<td><input class = "form-control" type="text" name="book_img" required="true" /></td>
+				</tr>
+				<tr>
+					<td scope="col">Book Description:</td>
+					<td><input class = "form-control" type="text" name="book_description" required="true" /></td>
+				</tr>
+
+				<tr>
 					<td scope="col">Book Price:</td>
 					<td><input class = "form-control" type="text" name="book_price" required="true" pattern="[0-9.]+"/></td>
 				</tr>

@@ -46,6 +46,18 @@
                 <td><jsp:getProperty name="book" property="bookName"/></td>
             </tr>
             <tr>
+                <td scope="col">Book Author:</td>
+                <td><jsp:getProperty name="book" property="bookAuthor"/></td>
+            </tr>
+            <tr>
+                <td scope="col">Book Img:</td>
+                <td><jsp:getProperty name="book" property="bookImg"/></td>
+            </tr>
+            <tr>
+                <td scope="col">Book Description:</td>
+                <td><jsp:getProperty name="book" property="bookDescription"/></td>
+            </tr>
+            <tr>
                 <td scope="col">Book Price:</td>
                 <td><jsp:getProperty name="book" property="bookPrice"/></td>
             </tr>

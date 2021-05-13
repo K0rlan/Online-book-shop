@@ -42,6 +42,9 @@
 		<table class="table">
 			<tr>
 				<th scope="col">Book Name</th>
+				<th scope="col">Book Author</th>
+				<th scope="col">Book Img</th>
+				<th scope="col">Book Description</th>
 				<th scope="col">Book Price</th>
 				<th scope="col">Book Year</th>
 				<th scope="col">Edit</th>
@@ -53,6 +56,9 @@
 			%>
 			<tr>
 				<td><%=book.getBookName()%></td>
+				<td><%=book.getBookAuthor()%></td>
+				<td><%=book.getBookImg()%></td>
+				<td><%=book.getBookDescription()%></td>
 				<td><%=book.getBookPrice()%></td>
 				<td><%=book.getBookYear()%></td>
 				<td><a href="../EditBookServlet?bookId=<%=book.getBookId()%>" style = "color: cornflowerblue">Edit

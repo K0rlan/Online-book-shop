@@ -5,6 +5,9 @@ import java.io.Serializable;
 public class Book implements Serializable {
     private int bookId;
     private String bookName;
+    private String bookAuthor;
+    private String bookImg;
+    private String bookDescription;
     private double bookPrice;
     private int bookYear;
 
@@ -42,12 +45,39 @@ public class Book implements Serializable {
         this.bookYear = bookYear;
     }
 
+    public String getBookAuthor() {
+        return bookAuthor;
+    }
+
+    public void setBookAuthor(String bookAuthor) {
+        this.bookAuthor = bookAuthor;
+    }
+
+    public String getBookImg() {
+        return bookImg;
+    }
+
+    public void setBookImg(String bookImg) {
+        this.bookImg = bookImg;
+    }
+
+    public String getBookDescription() {
+        return bookDescription;
+    }
+
+    public void setBookDescription(String bookDescription) {
+        this.bookDescription = bookDescription;
+    }
+
     @Override
     public String toString() {
         return "Book{" +
                 "bookId=" + bookId +
                 ", bookName='" + bookName + '\'' +
-                ", bookPrice='" + bookPrice + '\'' +
+                ", bookAuthor='" + bookAuthor + '\'' +
+                ", bookImg='" + bookImg + '\'' +
+                ", bookDescription='" + bookDescription + '\'' +
+                ", bookPrice=" + bookPrice +
                 ", bookYear=" + bookYear +
                 '}';
     }

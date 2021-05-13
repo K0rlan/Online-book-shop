@@ -54,6 +54,18 @@
 				<td><input type="text" name="book_name" required="true" value="<%=book.getBookName()%>" /></td>
 			</tr>
 			<tr>
+				<td scope="col">Book Author:</td>
+				<td><input type="text" name="book_author" required="true" value="<%=book.getBookAuthor()%>" /></td>
+			</tr>
+			<tr>
+				<td scope="col">Book Img:</td>
+				<td><input type="text" name="book_img" required="true" value="<%=book.getBookImg()%>" /></td>
+			</tr>
+			<tr>
+				<td scope="col">Book Description:</td>
+				<td><input type="text" name="book_description" required="true" value="<%=book.getBookDescription()%>" /></td>
+			</tr>
+			<tr>
 				<td scope="col">Book Price:</td>
 				<td><input type="text" name="book_price" required="true" value="<%=book.getBookPrice()%>" pattern="[0-9.]+" /></td>
 			</tr>
@@ -62,7 +74,7 @@
 				<td><input type="text" name="book_year" required="true" value="<%=book.getBookYear()%>" pattern="[0-9.]+" /></td>
 			</tr>
 			<tr>
-				<td><input value="Update Product" type="submit" class="brn btn-elegant" /></td>
+				<td><input value="Update Product" type="submit" class="btn btn-elegant" /></td>
 			</tr>
 		</table>
 	</form>

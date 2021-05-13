@@ -7,5 +7,17 @@
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
       <jdbc-url>jdbc:postgresql://localhost:5432/javaEE</jdbc-url>
     </data-source>
+    <data-source source="LOCAL" name="javaEE@localhost [2]" uuid="dc34f982-9662-4fbf-8fea-b267e96d68ff">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:5432/javaEE</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="booksShop@localhost" uuid="a3bb799d-2b03-4fec-b678-95a24cb0b5ba">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:5432/booksShop</jdbc-url>
+    </data-source>
   </component>
 </project>

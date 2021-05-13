@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MyDao {
-    private static final String url = "jdbc:postgresql://localhost:5432/javaEE";
+    private static final String url = "jdbc:postgresql://localhost:5432/booksShop";
     private static final String user = "postgres";
     private static final String password = "1234";
 
@@ -114,13 +114,19 @@ public class MyDao {
                 while(resultSet.next()){
                     int id = resultSet.getInt(1);
                     String name = resultSet.getString(2);
-                    double price = resultSet.getInt(3);
-                    int year = resultSet.getInt(4);
+                    String author = resultSet.getString(3);
+                    String img = resultSet.getString(4);
+                    String description = resultSet.getString(5);
+                    double price = resultSet.getInt(6);
+                    int year = resultSet.getInt(7);
                     Book book = new Book();
                     book.setBookId(id);
                     book.setBookName(name);
                     book.setBookYear(year);
                     book.setBookPrice(price);
+                    book.setBookAuthor(author);
+                    book.setBookImg(img);
+                    book.setBookDescription(description);
                     books.add(book);
                 }
             }
@@ -176,16 +182,21 @@ public class MyDao {
                     preparedStatement.setInt(1, id);
                     ResultSet resultSet = preparedStatement.executeQuery();
                     if(resultSet.next()){
-
                         int bookId = resultSet.getInt(1);
                         String name = resultSet.getString(2);
-                        double price = resultSet.getInt(3);
-                        int year = resultSet.getInt(4);
+                        String author = resultSet.getString(3);
+                        String img = resultSet.getString(4);
+                        String description = resultSet.getString(5);
+                        double price = resultSet.getInt(6);
+                        int year = resultSet.getInt(7);
                         book = new Book();
                         book.setBookPrice(price);
                         book.setBookYear(year);
                         book.setBookName(name);
                         book.setBookId(bookId);
+                        book.setBookAuthor(author);
+                        book.setBookImg(img);
+                        book.setBookDescription(description);
                     }
                 }
             }
@@ -202,11 +213,14 @@ public class MyDao {
             Class.forName("org.postgresql.Driver").getDeclaredConstructor().newInstance();
             try (Connection conn = DriverManager.getConnection(url, user, password)){
 
-                String sql = "INSERT INTO books (book_name, book_price, book_year) Values (?, ?, ?)";
+                String sql = "INSERT INTO books (book_name, book_author, book_img, book_description, book_price, book_year) Values (?, ?, ?, ?, ?, ?)";
                 try(PreparedStatement preparedStatement = conn.prepareStatement(sql)){
                     preparedStatement.setString(1, book.getBookName());
-                    preparedStatement.setDouble(2, book.getBookPrice());
-                    preparedStatement.setInt(3, book.getBookYear());
+                    preparedStatement.setString(2, book.getBookAuthor());
+                    preparedStatement.setString(3, book.getBookImg());
+                    preparedStatement.setString(4, book.getBookDescription());
+                    preparedStatement.setDouble(5, book.getBookPrice());
+                    preparedStatement.setInt(6, book.getBookYear());
                     preparedStatement.executeUpdate();
 
                     return true;
@@ -251,12 +265,16 @@ public class MyDao {
             Class.forName("org.postgresql.Driver").getDeclaredConstructor().newInstance();
             try (Connection conn = DriverManager.getConnection(url, user, password)){
 
-                String sql = "UPDATE books SET book_name = ?, book_price = ?, book_year = ? WHERE book_id = ?";
+                String sql = "UPDATE books SET book_name = ?, book_author = ?, book_img = ?, book_description = ?," +
+                        " book_price = ?, book_year = ? WHERE book_id = ?";
                 try(PreparedStatement preparedStatement = conn.prepareStatement(sql)){
                     preparedStatement.setString(1, book.getBookName());
-                    preparedStatement.setDouble(2, book.getBookPrice());
-                    preparedStatement.setInt(3, book.getBookYear());
-                    preparedStatement.setInt(4, book.getBookId());
+                    preparedStatement.setString(2, book.getBookAuthor());
+                    preparedStatement.setString(3, book.getBookImg());
+                    preparedStatement.setString(4, book.getBookDescription());
+                    preparedStatement.setDouble(5, book.getBookPrice());
+                    preparedStatement.setInt(6, book.getBookYear());
+                    preparedStatement.setInt(7, book.getBookId());
                     preparedStatement.executeUpdate();
 
                     return true;

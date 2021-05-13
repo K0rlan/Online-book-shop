@@ -39,6 +39,9 @@ public class EditBookServlet extends HttpServlet {
 
 		int bookId = Integer.parseInt(request.getParameter("book_id"));
 		String bookName= request.getParameter("book_name");
+		String bookAuthor= request.getParameter("book_author");
+		String bookImg= request.getParameter("book_img");
+		String bookDescription= request.getParameter("book_description");
 		String bookPrice = request.getParameter("book_price");
 		String bookYear = request.getParameter("book_year");
 		Book book = new Book();
@@ -49,10 +52,14 @@ public class EditBookServlet extends HttpServlet {
 		if(bookName != null && bookPrice != null && bookYear != null && bookId != 0){
 			book.setBookId(bookId);
 			book.setBookName(bookName);
+			book.setBookAuthor(bookAuthor);
+			book.setBookImg(bookImg);
+			book.setBookDescription(bookDescription);
 			book.setBookPrice(Double.parseDouble(bookPrice));
 			book.setBookYear(Integer.parseInt(bookYear));
 			try {
 				status = new MyDao().update(book);
+				book.toString();
 			} catch (Exception e) {
 				adminSession.setAttribute("exception",e);
 				e.printStackTrace();
